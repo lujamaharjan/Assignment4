@@ -9,6 +9,7 @@ def home(request):
 
 def blog_list(request):
     blogs = Blog.objects.all().order_by('-id')
+    print(blogs)
     paginator = Paginator(blogs, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
