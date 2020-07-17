@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %} Shadow Blogging: home {% endblock %}
+{% block main %}
+<section class="avtar">
+    <img src=" {% static 'blog/images/avataaars.svg' %}" class="mx-auto d-block" alt="avatar">
+    <div class="intro text-center">
+        <h2>Welcome to the shadow blogging!</h2>
+        <p>
+            You just signup and start writing blog about various tech topics.<br>
+            Mostly we blog about python and django.
+        </p>
+    </div>
+</section>
+{% endblock %}

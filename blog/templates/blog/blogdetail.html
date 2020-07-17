@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %} Shadow Blogging: home {% endblock %}
+{% block main %}
+
+
+     <section class="blog-detail">
+        <img src="{{ blog.feature_image.url }}" alt="blog image">
+        <h2>{{ blog.title }}</h2>
+        <p class="mb-4">
+            {{ blog.body }}
+        </p>
+        <p><span class="font-weight-bold">Author: </span>
+            {% if blog.author %}
+                {{ blog.author.get_fullname }}</p>
+            {% else %}
+                Anonymous
+            {% endif %}
+        <p><span class="font-weight-bold">Created_at: </span> {{ blog.created_date }}</p>
+        <p><span class="font-weight-bold">Updated_at: </span>  {{ blog.updated_date }}</p>
+     </section>
+
+{% endblock %}
